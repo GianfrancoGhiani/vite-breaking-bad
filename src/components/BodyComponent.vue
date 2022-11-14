@@ -1,7 +1,7 @@
 <template>
   <div class="container-md">
-    <section class="cards row row-cols-5">
-      <CardComponent :character="character" />
+    <section class="cards row row-cols-lg-5 g-3 row-cols-md-4 row-cols-sm-3">
+      <CardComponent v-for="(char, index) in characterList" :key="char.char_id" :character="char" />
     </section>
   </div>
 </template>
@@ -18,12 +18,12 @@ export default {
   },
   data() {
     return {
-      character: '',
+      characterList: [],
     }
   },
   created() {
     axios.get('https://breakingbadapi.com/api/characters').then((answ) => {
-      this.character = answ.data[0];
+      this.characterList = answ.data;
     })
   }
 

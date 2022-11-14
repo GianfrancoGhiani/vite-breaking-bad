@@ -1,15 +1,15 @@
 <template>
-  <div class="my-card col">
-    <div class="my-card-img"><img :src="character.img" :alt="character.name"></div>
-    <div class="my-card-name">{{ character.name }}</div>
-    <div class="grey">{{ character.category }}</div>
-    <div class="grey">{{ character.status }}</div>
-    <div class="details">
-      <div>{{ character.nickname }}</div>
-      <div>by {{ character.portrayed }}</div>
+  <div class="col">
+    <div class="my-card">
+      <div class="my-card-img"><img :src="character.img" :alt="character.name"></div>
+      <div class="my-card-name">{{ character.name }}</div>
+      <div class="grey">{{ character.category }}</div>
+      <div class="grey">{{ character.status }}</div>
+      <div class="details">
+        <div>{{ character.nickname }}</div>
+        <div>by {{ character.portrayed }}</div>
+      </div>
     </div>
-
-
   </div>
 </template>
 
@@ -37,12 +37,16 @@ export default {
 @use '../assets/style/partials/variables' as*;
 
 .my-card {
+  cursor: pointer;
   background-color: $main-bg;
   text-align: center;
-
   padding: 1rem;
+  height: 480px;
 
   .my-card-img {
+    height: 315px;
+    overflow: hidden;
+
     img {
       max-width: 100%;
     }
@@ -73,6 +77,23 @@ export default {
     .details {
       color: $grey-text;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .my-card {
+    height: 400px;
+
+    .my-card-img {
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .my-card {
+    height: 380px;
+
   }
 }
 </style>
