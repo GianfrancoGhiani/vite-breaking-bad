@@ -7,11 +7,13 @@
 import BodyComponent from "./components/BodyComponent.vue";
 import HeaderComponent from "./components/HeaderComponent.vue";
 
+
 export default {
   components: {
     HeaderComponent,
     BodyComponent
-  }
+  },
+
 };
 </script>
 
