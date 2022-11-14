@@ -1,4 +1,7 @@
 <template>
+  <section class="container-md my-3">
+    <FilterComponent />
+  </section>
   <div class="container-md my-body">
     <section class="my-3">
       <FoundedComponent :num="length" />
@@ -13,18 +16,21 @@
 import CardComponent from './CardComponent.vue';
 import axios from 'axios';
 import FoundedComponent from './FoundedComponent.vue';
-
+import FilterComponent from './FilterComponent.vue';
+// import { store } from '../assets/store.js'
 
 export default {
   name: "BodyComponent",
   components: {
     CardComponent,
-    FoundedComponent
+    FoundedComponent,
+    FilterComponent
   },
   data() {
     return {
       characterList: [],
       length: null,
+      // store
     }
   },
   created() {
@@ -32,6 +38,7 @@ export default {
       this.characterList = answ.data;
       this.length = this.characterList.length;
     })
+
   }
 
 };
