@@ -1,7 +1,20 @@
-<template></template>
+<template>
+  <HeaderComponent />
+  <BodyComponent />
+</template>
 
 <script>
-export default {};
+import BodyComponent from "./components/BodyComponent.vue";
+import HeaderComponent from "./components/HeaderComponent.vue";
+
+export default {
+  components: {
+    HeaderComponent,
+    BodyComponent
+  }
+};
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+</style>
