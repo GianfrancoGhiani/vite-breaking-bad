@@ -5,4 +5,5 @@ export const store = reactive({
     characterList: [],
     length: null,
     selection: '',
+    loading: false,
 })

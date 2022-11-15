@@ -1,4 +1,5 @@
 <template>
+  <!-- title bar section -->
   <div class="container-lg d-flex align-items-center">
     <img src="../assets/img/logo.png" alt="Breaking Bad">
     <h1>Breaking Bad Api</h1>

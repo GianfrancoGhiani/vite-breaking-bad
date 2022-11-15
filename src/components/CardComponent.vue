@@ -14,12 +14,10 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
   name: 'CardComponent',
   props: {
-    character: Object
+    character: Object,
   },
   data() {
     return {

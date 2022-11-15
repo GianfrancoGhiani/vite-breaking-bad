@@ -1,5 +1,7 @@
 <template>
+
   <HeaderComponent />
+
   <BodyComponent />
 </template>
 

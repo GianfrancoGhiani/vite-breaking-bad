@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- on change call the parent component (bodycomp) and modify store.selection variable -->
     <select name="category" id="cat-selector" @change="catChange()" v-model="store.selection">
       <option value="">All</option>
       <option value="Breaking Bad">Breaking Bad</option>
